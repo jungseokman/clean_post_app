@@ -82,6 +82,7 @@ class _PostPageState extends State<PostPage> {
 
                   case ReadPostSuccess():
                     return ListView.builder(
+                      itemCount: state.posts.length,
                       itemBuilder: (context, index) => Column(
                         children: [
                           Text(state.posts[index].userid.toString()),
